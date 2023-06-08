@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="methods" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="passWord" value="crmsfa"/>
+  <parameter name="userName" value="DemoSalesManager"/>
+  <parameter name="url" value="http://leaftaps.com/opentaps/"/>
+  <test thread-count="5" parallel="methods" name="TestNgParallelMethod(failed)">
+    <classes>
+      <class name="testng.demo.CreateLead">
+        <methods>
+          <include name="runCreateLead" invocation-numbers="1"/>
+          <include name="postApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testng.demo.CreateLead -->
+    </classes>
+  </test> <!-- TestNgParallelMethod(failed) -->
+</suite> <!-- Failed suite [Suite] -->
